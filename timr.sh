@@ -6,16 +6,16 @@
 #Countdown timer script
 duration=$1 # Accept duration as a command-line argument 
 
-if [[ -z "$duration"]]; then
+if [[ -z "$duration" ]]; then
   echo "Usage: $0 <duration in seconds>"
   exit 1
 fi
 
 # Convert duration to minutes and seconds
-min=$((duration / 60))
-sec=$((duration % 60))
+#minutes=$((duration / 60))
+#seconds=$((duration % 60))
 
-for ((i=duration; i>0 i--)); do
+for ((i=duration; i>0; i--)); do
   # Calculate remaining minutes and seconds
   remaining_mins=$((i / 60))
   remaining_secs=$((i % 60))
